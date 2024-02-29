@@ -1,0 +1,46 @@
+.container {
+  flex-grow: 1;
+}
+
+.codeEditor {
+  display: flex;
+  font-size: 14px;
+  border: 1px solid #121212;
+  border-radius: 16px;
+  margin-top: 8px;
+}
+
+.lineNumbers {
+  color: #6f6f6f;
+  flex-shrink: 0;
+  background-color: #222;
+  padding: 10px;
+  padding-top: 12px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #333;
+  font-size: 12px;
+}
+
+.lineNumbers div {
+  padding-bottom: 0.2px;
+}
+
+.codeArea {
+  border-radius: 0 16px 16px 0;
+  font-size: 16px; /* Adjust the font size here */
+  flex-grow: 1;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  outline: none;
+  border: none;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 16px;
+  margin: 16px 0;
+  text-align: right;
+}

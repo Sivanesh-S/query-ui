@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1 (123) 456-7890",
+    "address": "123 Main St, Anytown, USA",
+    "age": 35,
+    "gender": "Male",
+    "membership": "Gold",
+    "registration_date": "2023-01-15",
+    "last_purchase_date": "2024-02-25"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "+1 (234) 567-8901",
+    "address": "456 Elm St, Anycity, USA",
+    "age": 28,
+    "gender": "Female",
+    "membership": "Silver",
+    "registration_date": "2023-02-10",
+    "last_purchase_date": "2024-02-28"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "email": "michael.johnson@example.com",
+    "phone": "+1 (345) 678-9012",
+    "address": "789 Oak St, Anyvillage, USA",
+    "age": 40,
+    "gender": "Male",
+    "membership": "Platinum",
+    "registration_date": "2022-12-05",
+    "last_purchase_date": "2024-02-20"
+  },
+  {
+    "id": 4,
+    "name": "Emily Williams",
+    "email": "emily.williams@example.com",
+    "phone": "+1 (456) 789-0123",
+    "address": "012 Pine St, Anysuburb, USA",
+    "age": 32,
+    "gender": "Female",
+    "membership": "Gold",
+    "registration_date": "2023-03-18",
+    "last_purchase_date": "2024-02-26"
+  },
+  {
+    "id": 5,
+    "name": "David Brown",
+    "email": "david.brown@example.com",
+    "phone": "+1 (567) 890-1234",
+    "address": "345 Cedar St, Anyhamlet, USA",
+    "age": 45,
+    "gender": "Male",
+    "membership": "Silver",
+    "registration_date": "2023-04-22",
+    "last_purchase_date": "2024-02-28"
+  },
+  {
+    "id": 6,
+    "name": "Sarah Taylor",
+    "email": "sarah.taylor@example.com",
+    "phone": "+1 (678) 901-2345",
+    "address": "678 Maple St, Anycountryside, USA",
+    "age": 30,
+    "gender": "Female",
+    "membership": "Gold",
+    "registration_date": "2023-05-10",
+    "last_purchase_date": "2024-02-27"
+  },
+  {
+    "id": 7,
+    "name": "Christopher Martinez",
+    "email": "christopher.martinez@example.com",
+    "phone": "+1 (789) 012-3456",
+    "address": "901 Walnut St, Anyplace, USA",
+    "age": 38,
+    "gender": "Male",
+    "membership": "Platinum",
+    "registration_date": "2023-06-28",
+    "last_purchase_date": "2024-02-29"
+  },
+  {
+    "id": 8,
+    "name": "Amanda Rodriguez",
+    "email": "amanda.rodriguez@example.com",
+    "phone": "+1 (890) 123-4567",
+    "address": "234 Birch St, Anyneighborhood, USA",
+    "age": 27,
+    "gender": "Female",
+    "membership": "Silver",
+    "registration_date": "2023-07-15",
+    "last_purchase_date": "2024-02-25"
+  },
+  {
+    "id": 9,
+    "name": "James Lee",
+    "email": "james.lee@example.com",
+    "phone": "+1 (901) 234-5678",
+    "address": "567 Ash St, Anytownship, USA",
+    "age": 33,
+    "gender": "Male",
+    "membership": "Gold",
+    "registration_date": "2023-08-20",
+    "last_purchase_date": "2024-02-26"
+  },
+  {
+    "id": 10,
+    "name": "Melissa Young",
+    "email": "melissa.young@example.com",
+    "phone": "+1 (012) 345-6789",
+    "address": "890 Spruce St, Anycity, USA",
+    "age": 31,
+    "gender": "Female",
+    "membership": "Silver",
+    "registration_date": "2023-09-12",
+    "last_purchase_date": "2024-02-28"
+  }
+]

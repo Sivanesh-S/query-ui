@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor with Line Numbers</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .code-editor {
+        display: flex;
+        font-size: 14px;
+        border: 1px solid #ccc;
+      }
+      .line-numbers {
+        flex-shrink: 0;
+        background-color: #f0f0f0;
+        padding: 10px;
+        padding-top: 12px;
+        text-align: right;
+        user-select: none;
+        border-right: 1px solid #ccc;
+        font-size: 12px;
+      }
+
+      .line-numbers div {
+        padding-bottom: 5px;
+      }
+
+      .code-area {
+        font-size: 16px; /* Adjust the font size here */
+        flex-grow: 1;
+        padding: 10px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="code-editor">
+      <div class="line-numbers"></div>
+      <textarea class="code-area" rows="10" cols="50"></textarea>
+    </div>
+
+    <script>
+      const textarea = document.querySelector(".code-area");
+      const lineNumbers = document.querySelector(".line-numbers");
+
+      function updateLineNumbers() {
+        const lines = textarea.value.split("\n").length;
+        lineNumbers.innerHTML = "";
+        for (let i = 1; i <= lines; i++) {
+          lineNumbers.innerHTML += `\n<div>${i}</div>`;
+        }
+      }
+
+      textarea.addEventListener("input", updateLineNumbers);
+
+      // Initial line numbers update
+      updateLineNumbers();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.container {
+  min-width: 720px;
+  max-width: 1240px;
+  text-align: left;
+}
+
+.appHeader {
+  text-align: center;
+}
+
+.mainSection {
+  display: flex;
+  gap: 24px;
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultActions {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  padding: 8px 48px;
+}
+
+.button.primary {
+  background: #382bf0;
+}

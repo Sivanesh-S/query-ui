@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "age": 35,
+    "gender": "Male",
+    "position": "Software Engineer",
+    "department": "Engineering",
+    "salary": 80000,
+    "email": "john.doe@example.com",
+    "phone": "+1 (123) 456-7890",
+    "address": "123 Main St, Anytown, USA"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 28,
+    "gender": "Female",
+    "position": "Marketing Manager",
+    "department": "Marketing",
+    "salary": 75000,
+    "email": "jane.smith@example.com",
+    "phone": "+1 (234) 567-8901",
+    "address": "456 Elm St, Anycity, USA"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "age": 40,
+    "gender": "Male",
+    "position": "Finance Director",
+    "department": "Finance",
+    "salary": 90000,
+    "email": "michael.johnson@example.com",
+    "phone": "+1 (345) 678-9012",
+    "address": "789 Oak St, Anyvillage, USA"
+  },
+  {
+    "id": 4,
+    "name": "Emily Williams",
+    "age": 32,
+    "gender": "Female",
+    "position": "HR Manager",
+    "department": "Human Resources",
+    "salary": 70000,
+    "email": "emily.williams@example.com",
+    "phone": "+1 (456) 789-0123",
+    "address": "012 Pine St, Anysuburb, USA"
+  },
+  {
+    "id": 5,
+    "name": "David Brown",
+    "age": 45,
+    "gender": "Male",
+    "position": "Operations Manager",
+    "department": "Operations",
+    "salary": 85000,
+    "email": "david.brown@example.com",
+    "phone": "+1 (567) 890-1234",
+    "address": "345 Cedar St, Anyhamlet, USA"
+  },
+  {
+    "id": 6,
+    "name": "Sarah Taylor",
+    "age": 30,
+    "gender": "Female",
+    "position": "Sales Manager",
+    "department": "Sales",
+    "salary": 78000,
+    "email": "sarah.taylor@example.com",
+    "phone": "+1 (678) 901-2345",
+    "address": "678 Maple St, Anycountryside, USA"
+  },
+  {
+    "id": 7,
+    "name": "Christopher Martinez",
+    "age": 38,
+    "gender": "Male",
+    "position": "Product Manager",
+    "department": "Product Management",
+    "salary": 82000,
+    "email": "christopher.martinez@example.com",
+    "phone": "+1 (789) 012-3456",
+    "address": "901 Walnut St, Anyplace, USA"
+  },
+  {
+    "id": 8,
+    "name": "Amanda Rodriguez",
+    "age": 27,
+    "gender": "Female",
+    "position": "Customer Support Specialist",
+    "department": "Customer Support",
+    "salary": 60000,
+    "email": "amanda.rodriguez@example.com",
+    "phone": "+1 (890) 123-4567",
+    "address": "234 Birch St, Anyneighborhood, USA"
+  },
+  {
+    "id": 9,
+    "name": "James Lee",
+    "age": 33,
+    "gender": "Male",
+    "position": "Quality Assurance Analyst",
+    "department": "Quality Assurance",
+    "salary": 70000,
+    "email": "james.lee@example.com",
+    "phone": "+1 (901) 234-5678",
+    "address": "567 Ash St, Anytownship, USA"
+  },
+  {
+    "id": 10,
+    "name": "Melissa Young",
+    "age": 31,
+    "gender": "Female",
+    "position": "Research Scientist",
+    "department": "Research & Development",
+    "salary": 85000,
+    "email": "melissa.young@example.com",
+    "phone": "+1 (012) 345-6789",
+    "address": "890 Spruce St, Anycity, USA"
+  }
+]
