@@ -3,66 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Editor with Line Numbers</title>
+    <title>Copy Code Button</title>
     <style>
       body {
         font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
         margin: 0;
         padding: 0;
       }
-      .code-editor {
-        display: flex;
-        font-size: 14px;
-        border: 1px solid #ccc;
-      }
-      .line-numbers {
-        flex-shrink: 0;
-        background-color: #f0f0f0;
-        padding: 10px;
-        padding-top: 12px;
-        text-align: right;
-        user-select: none;
-        border-right: 1px solid #ccc;
-        font-size: 12px;
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative; /* Ensure relative positioning for absolute child */
       }
 
-      .line-numbers div {
-        padding-bottom: 5px;
+      pre {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin-bottom: 20px;
       }
 
-      .code-area {
-        font-size: 16px; /* Adjust the font size here */
-        flex-grow: 1;
-        padding: 10px;
-        white-space: pre-wrap;
-        overflow-wrap: break-word;
-        outline: none;
+      .copy-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
         border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .copy-button:hover {
+        background-color: #0056b3;
       }
     </style>
   </head>
   <body>
-    <div class="code-editor">
-      <div class="line-numbers"></div>
-      <textarea class="code-area" rows="10" cols="50"></textarea>
+    <div class="container">
+      <h2>Code Block Example</h2>
+
+      <pre>
+        <code id="codeSnippet">
+            /* Your code goes here */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            /* Add more styles as needed */
+        </code>
+    </pre>
+
+      <button class="copy-button" onclick="copyCode()">Copy code</button>
     </div>
 
     <script>
-      const textarea = document.querySelector(".code-area");
-      const lineNumbers = document.querySelector(".line-numbers");
+      function copyCode() {
+        const codeSnippet = document.getElementById("codeSnippet");
+        const codeText = codeSnippet.textContent;
 
-      function updateLineNumbers() {
-        const lines = textarea.value.split("\n").length;
-        lineNumbers.innerHTML = "";
-        for (let i = 1; i <= lines; i++) {
-          lineNumbers.innerHTML += `\n<div>${i}</div>`;
-        }
+        const textarea = document.createElement("textarea");
+        textarea.value = codeText;
+        document.body.appendChild(textarea);
+
+        textarea.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(textarea);
+
+        alert("Code copied to clipboard!");
       }
-
-      textarea.addEventListener("input", updateLineNumbers);
-
-      // Initial line numbers update
-      updateLineNumbers();
     </script>
   </body>
 </html>

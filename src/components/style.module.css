@@ -33,3 +33,9 @@
 .button.primary {
   background: #382bf0;
 }
+
+.contentMessage {
+  text-align: center;
+  margin: 64px 0;
+  font-size: 20px;
+}

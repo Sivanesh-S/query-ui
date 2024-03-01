@@ -4,7 +4,12 @@ export function Result(props) {
   const { data, onCopy, onDownload } = props;
 
   if (!data || data.length === 0) {
-    return <p>No data available</p>;
+    return (
+      <div>
+        <h2>Results</h2>
+        <p className={style.contentMessage}>No data available</p>
+      </div>
+    );
   }
 
   // Extracting keys from the first object in the array

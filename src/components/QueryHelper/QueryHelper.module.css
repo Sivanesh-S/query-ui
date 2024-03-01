@@ -1,11 +1,66 @@
 .container {
   background-color: #212121;
   flex-grow: 1;
+  flex-basis: 50%;
   border-radius: 16px;
-  padding: 0 1em;
+}
+
+.menuContainer {
+  display: flex;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+}
+
+.menu {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .menuIcon {
   width: 24px;
   height: 24px;
+}
+
+.menu:hover {
+  background-color: #212121;
+}
+
+.menuActive {
+  background-color: #212121;
+}
+
+.helperHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.contentMessage {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.queryContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.queryContainer:hover .codeButton {
+  opacity: 1;
+}
+
+.codeButton {
+  opacity: 0;
+  /* transition: 2000ms visibility ease-in-out; */
+  transition: opacity 0.3s ease;
+  padding: 4px 8px;
+  position: absolute;
+  right: 32px;
+  top: 8px;
+  font-size: 12px;
 }
