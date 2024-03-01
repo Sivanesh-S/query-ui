@@ -4,7 +4,7 @@ import mainStyle from "../style.module.css";
 import { useState } from "react";
 
 export function QueryInput(props) {
-  const { value, onChange, onClear, onSubmit } = props;
+  const { value, onChange, onClear, onSubmit, onSave } = props;
 
   // State
   const [lineCount, setLineCount] = useState(1);
@@ -27,9 +27,14 @@ export function QueryInput(props) {
 
   return (
     <div className={style.container}>
-      <label htmlFor="query-editor" className={style.inputLabel}>
-        <h2>SQL Query</h2>
-      </label>
+      <div className={style.headerContainer}>
+        <label htmlFor="query-editor" className={style.inputLabel}>
+          <h2>SQL Query</h2>
+        </label>
+        <button className={mainStyle.button} onClick={onSave}>
+          Save Query
+        </button>
+      </div>
       <div className={style.codeEditor}>
         <div className={style.lineNumbers} ref={lineNumbersRef}>
           {new Array(lineCount).fill(0).map((_, index) => (

@@ -27,16 +27,32 @@ const getStoredHistory = () => {
   return false;
 };
 
+const getStoredQueries = () => {
+  try {
+    const storedQueriesString = localStorage.getItem("saved");
+    const storedQueries = JSON.parse(storedQueriesString);
+    return storedQueries;
+  } catch (err) {
+    /* empty */
+  }
+  return false;
+};
+
 export function QueryApplication() {
   // State
   const [query, setQuery] = useState("");
   const [tableData, setTableData] = useState(null);
   const [history, setHistory] = useState(getStoredHistory() || []);
+  const [saved, setSaved] = useState(getStoredQueries() || []);
 
   // Effects
   useEffect(() => {
     localStorage.setItem("history", JSON.stringify(history));
   }, [history]);
+
+  useEffect(() => {
+    localStorage.setItem("saved", JSON.stringify(saved));
+  }, [saved]);
 
   // Handlers
   const onClearQuery = () => {
@@ -82,18 +98,22 @@ export function QueryApplication() {
 
   const clearHistory = () => setHistory([]);
 
-  const deleteHistory = (index) => {
-    setHistory((pre) => {
-      const newArr = [...pre.slice(0, index), ...pre.slice(index + 1)];
-      console.info(
-        "newArr: ",
-        pre.slice(0, index),
-        pre.slice(index + 1),
-        index
-      );
-      return newArr;
-    });
+  const deleteHistory = (index) =>
+    setHistory((pre) => [...pre.slice(0, index), ...pre.slice(index + 1)]);
+
+  const saveQuery = () => {
+    setSaved((pre) => [query, ...pre]);
   };
+
+  const selectSavedQuery = (index) => {
+    const selectedQuery = saved[index];
+    setQuery(selectedQuery);
+    submitQuery(selectedQuery, true);
+  };
+
+  const clearSaved = () => setSaved([]);
+  const deleteSaved = (index) =>
+    setSaved((pre) => [...pre.slice(0, index), ...pre.slice(index + 1)]);
 
   const onCopy = () => {};
   const onDownload = () => {};
@@ -112,12 +132,17 @@ export function QueryApplication() {
           onChange={setQuery}
           onClear={onClearQuery}
           onSubmit={onSubmit}
+          onSave={saveQuery}
         />
         <QueryHelper
           history={history}
           selectQuery={selectQuery}
           clearHistory={clearHistory}
           deleteHistory={deleteHistory}
+          saved={saved}
+          selectSaved={selectSavedQuery}
+          clearSaved={clearSaved}
+          deleteSaved={deleteSaved}
         />
       </div>
       <Result data={tableData} onCopy={onCopy} onDownload={onDownload} />
