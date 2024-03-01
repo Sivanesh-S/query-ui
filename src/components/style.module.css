@@ -1,11 +1,13 @@
 .container {
-  min-width: 720px;
-  max-width: 1240px;
+  /* min-width: 720px; */
+  /* width: 1240px; */
   text-align: left;
 }
 
-.appHeader {
+.appHeader,
+.appDescription {
   text-align: center;
+  margin-top: 0px;
 }
 
 .mainSection {

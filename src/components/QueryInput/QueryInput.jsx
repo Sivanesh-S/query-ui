@@ -3,9 +3,10 @@ import style from "./QueryInput.module.css";
 import mainStyle from "../style.module.css";
 import { useState } from "react";
 
-export function QueryInput() {
+export function QueryInput(props) {
+  const { value, onChange, onClear, onSubmit } = props;
+
   // State
-  const [code, setCode] = useState("");
   const [lineCount, setLineCount] = useState(1);
 
   // Refs
@@ -17,7 +18,7 @@ export function QueryInput() {
     const value = event.target.value;
     const newLineCount = value.split("\n").length;
 
-    setCode(value);
+    onChange(value);
 
     if (newLineCount !== lineCount) {
       setLineCount(newLineCount);
@@ -42,14 +43,19 @@ export function QueryInput() {
           ref={editorRef}
           onChange={handleCodeChange}
           placeholder="Enter your SQL Query here"
-          value={code}
+          value={value}
         ></textarea>
       </div>
       <div className={style.actions}>
-        <button className={`${mainStyle.button} ${mainStyle.primary}`}>
+        <button
+          className={`${mainStyle.button} ${mainStyle.primary}`}
+          onClick={onSubmit}
+        >
           Submit Query
         </button>
-        <button className={mainStyle.button}>Clear</button>
+        <button className={mainStyle.button} onClick={onClear}>
+          Clear
+        </button>
       </div>
     </div>
   );

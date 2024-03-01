@@ -1,4 +1,11 @@
 .container {
   background-color: #212121;
   flex-grow: 1;
+  border-radius: 16px;
+  padding: 0 1em;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
 }

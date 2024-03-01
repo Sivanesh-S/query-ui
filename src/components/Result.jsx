@@ -1,9 +1,7 @@
-import employees from "../data/employees.json";
-
 import style from "./style.module.css";
 
 export function Result(props) {
-  const { data = employees } = props;
+  const { data, onCopy, onDownload } = props;
 
   if (!data || data.length === 0) {
     return <p>No data available</p>;
@@ -17,8 +15,13 @@ export function Result(props) {
       <div className={style.resultHeader}>
         <h2>Results</h2>
         <div className={style.resultActions}>
-          <button className={style.button}>Copy JSON</button>
-          <button className={`${style.button} ${style.primary}`}>
+          <button className={style.button} onClick={onCopy}>
+            Copy JSON
+          </button>
+          <button
+            className={`${style.button} ${style.primary}`}
+            onClick={onDownload}
+          >
             Download
           </button>
         </div>

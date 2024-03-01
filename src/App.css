@@ -1,7 +1,8 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  /* padding: 2rem; */
+  width: 100%;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -62,4 +63,12 @@ th {
 
 tr:nth-child(even) {
   background-color: #212121; /* Alternate row background color */
+}
+
+code {
+  background: #1a1a1a;
+  padding: 0.2em 0.4em;
+  color: #eb5757;
+  font-size: 85%;
+  border-radius: 4px;
 }
