@@ -9,7 +9,7 @@ import { QueryList } from "./QueryList";
 import { Database } from "./Database";
 
 const menuItems = [
-  { name: "Info", Icon: InformationIcon },
+  // { name: "Info", Icon: InformationIcon },
   { name: "History", Icon: HistoryIcon },
   { name: "Saved Queries", Icon: SaveIcon },
   { name: "Database", Icon: DatabaseIcon },
@@ -29,12 +29,15 @@ export function QueryHelper(props) {
   } = props;
 
   // State
-  const [activeMenu, setActiveMenu] = useState("Info");
+  const [activeMenu, setActiveMenu] = useState("History");
 
   // Handlers
-  const onOptionClick = (option) => () => {
+
+  const updateActiveMenu = (option) => {
     setActiveMenu(option);
   };
+
+  const onOptionClick = (option) => () => setActiveMenu(option);
 
   // Render function
   const renderContents = () => {
@@ -79,6 +82,12 @@ export function QueryHelper(props) {
     }
   };
 
+  const handleKeyPress = (option) => (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      updateActiveMenu(option);
+    }
+  };
+
   return (
     <div className={style.container}>
       <div className={style.menuContainer}>
@@ -92,6 +101,9 @@ export function QueryHelper(props) {
                 activeMenu === name ? style.menuActive : ""
               }`}
               onClick={onOptionClick(name)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={handleKeyPress(name)}
             >
               <Icon key={name} className={style.menuIcon} />
               <span>{name}</span>

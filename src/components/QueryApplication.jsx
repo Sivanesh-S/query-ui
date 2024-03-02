@@ -116,7 +116,19 @@ export function QueryApplication() {
     setSaved((pre) => [...pre.slice(0, index), ...pre.slice(index + 1)]);
 
   const onCopy = () => {};
-  const onDownload = () => {};
+  const onDownload = () => {
+    const element = document.createElement("a");
+    element.setAttribute(
+      "href",
+      "data:text/json;charset=utf-8, " +
+        encodeURIComponent(JSON.stringify(tableData))
+    );
+    element.setAttribute("download", "download.json");
+    document.body.appendChild(element);
+    element.click();
+
+    document.body.removeChild(element);
+  };
 
   return (
     <div className={style.container}>

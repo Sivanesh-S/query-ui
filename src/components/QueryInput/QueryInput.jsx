@@ -31,7 +31,7 @@ export function QueryInput(props) {
         <label htmlFor="query-editor" className={style.inputLabel}>
           <h2>SQL Query</h2>
         </label>
-        <button className={mainStyle.button} onClick={onSave}>
+        <button className={mainStyle.button} onClick={onSave} disabled={!value}>
           Save Query
         </button>
       </div>
@@ -55,10 +55,16 @@ export function QueryInput(props) {
         <button
           className={`${mainStyle.button} ${mainStyle.primary}`}
           onClick={onSubmit}
+          disabled={!value}
         >
           Submit Query
         </button>
-        <button className={mainStyle.button} onClick={onClear}>
+
+        <button
+          className={mainStyle.button}
+          onClick={onClear}
+          disabled={!value}
+        >
           Clear
         </button>
       </div>

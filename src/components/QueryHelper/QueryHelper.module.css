@@ -83,6 +83,8 @@
   align-items: center;
   text-transform: capitalize;
   overflow-y: auto;
+  border-radius: 0;
+  width: 100%;
 }
 
 .entityIcon {

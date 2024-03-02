@@ -8,9 +8,6 @@ export function Database(props) {
   // State
   const [activeEntity, setActiveEntity] = useState(null);
 
-  // Handlers
-  console.info("dataMap[activeEntity]: ", dataMap[activeEntity]);
-
   return (
     <div>
       <header className={style.helperHeader}>
@@ -19,16 +16,17 @@ export function Database(props) {
       <main className={style.databaseContent}>
         <div className={style.databases}>
           {Object.keys(dataMap).map((entity) => (
-            <div
+            <button
               className={`${style.entity} ${
                 activeEntity === entity ? style.entityActive : ""
               }`}
               key={entity}
               onClick={() => setActiveEntity(entity)}
+              role="button"
             >
               <DatabaseIcon className={style.entityIcon} />
               <span>{entity}</span>
-            </div>
+            </button>
           ))}
         </div>
         {activeEntity ? (
