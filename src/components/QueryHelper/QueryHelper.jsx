@@ -6,6 +6,7 @@ import HistoryIcon from "../../assets/history-line.svg?react";
 import SaveIcon from "../../assets/save.svg?react";
 import { useState } from "react";
 import { QueryList } from "./QueryList";
+import { Database } from "./Database";
 
 const menuItems = [
   { name: "Info", Icon: InformationIcon },
@@ -24,10 +25,11 @@ export function QueryHelper(props) {
     selectSaved,
     clearSaved,
     deleteSaved,
+    dataMap,
   } = props;
 
   // State
-  const [activeMenu, setActiveMenu] = useState("Saved Queries");
+  const [activeMenu, setActiveMenu] = useState("Info");
 
   // Handlers
   const onOptionClick = (option) => () => {
@@ -72,6 +74,8 @@ export function QueryHelper(props) {
             }
           />
         );
+      case "Database":
+        return <Database dataMap={dataMap} />;
     }
   };
 

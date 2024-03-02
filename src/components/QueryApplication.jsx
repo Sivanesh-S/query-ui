@@ -143,6 +143,7 @@ export function QueryApplication() {
           selectSaved={selectSavedQuery}
           clearSaved={clearSaved}
           deleteSaved={deleteSaved}
+          dataMap={dataMap}
         />
       </div>
       <Result data={tableData} onCopy={onCopy} onDownload={onDownload} />

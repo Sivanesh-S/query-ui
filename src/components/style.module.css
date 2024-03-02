@@ -13,6 +13,7 @@
 .mainSection {
   display: flex;
   gap: 24px;
+  height: 390px;
 }
 
 .resultHeader {

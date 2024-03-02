@@ -64,3 +64,45 @@
   top: 8px;
   font-size: 12px;
 }
+
+.databaseContent {
+  display: flex;
+}
+
+.databases {
+  width: max-content;
+}
+
+.entity {
+  padding: 10px 20px;
+  margin-left: 16px;
+  background: #444343;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-transform: capitalize;
+  overflow-y: auto;
+}
+
+.entityIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.entityActive,
+.entity:hover {
+  background-color: #2d2d2d;
+}
+
+.column {
+  padding: 10px 20px;
+}
+
+.keys {
+  flex-grow: 1;
+  background: #2d2d2d;
+  height: 250px;
+  overflow: auto;
+  margin-right: 16px;
+}
