@@ -10,10 +10,11 @@ This is a simple SPA which lets you query a data, and download the results. It a
 ## Features
 
 1. It is keyboard accessible.
-2. Query history is saved. Uses `localStorage` and saves the recent 30 queries. 
-3. You can save indivual queries for later use. 
-4. There is a `Database` tab in the helper section that allows you to see all the possible tables and it's schema. 
-5. If you query valid results, then you can download them as a `.json` file or you can copy the contents as **JSON.**
+2. Table data is virtualized. So you can see thousands of records without any slowness in the application.
+3. Query history is saved. Uses `localStorage` and saves the recent 30 queries. 
+4. You can save indivual queries for later use. 
+5. There is a `Database` tab in the helper section that allows you to see all the possible tables and it's schema. 
+6. If you query valid results, then you can download them as a `.json` file or you can copy the contents as **JSON.**
 
 ## Tech stack
 
@@ -21,7 +22,7 @@ I'm using React with Vite for this project. (So that I can also easily deploy it
 
 For CSS we are using **CSS Modules**, As it let's this block of code reusable as a module in other codebase without worrying about CSS Overriding. 
 
-No other external dependencies are used. 
+Only one extenal package that I'm using is `react-virtualized` For virtualizing table data for thousands of records.
 
 ## Performance
 
