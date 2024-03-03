@@ -40,3 +40,7 @@
   margin: 64px 0;
   font-size: 20px;
 }
+
+.evenRow {
+  background: #2d2d2d;
+}

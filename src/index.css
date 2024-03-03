@@ -72,3 +72,8 @@ button:disabled {
     background-color: #f9f9f9;
   }
 }
+
+thead {
+  position: sticky;
+  top: -4px;
+}

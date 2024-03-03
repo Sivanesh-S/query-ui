@@ -8,6 +8,7 @@ import customers from "../data/customers.json";
 
 import style from "./style.module.css";
 import { CONSTANTS } from "../constants/constants";
+import TableExample from "./Test";
 
 const currentEntities = ["employee", "customer", "product"];
 const dataMap = {
@@ -115,7 +116,9 @@ export function QueryApplication() {
   const deleteSaved = (index) =>
     setSaved((pre) => [...pre.slice(0, index), ...pre.slice(index + 1)]);
 
-  const onCopy = () => {};
+  const onCopy = () => {
+    navigator.clipboard.writeText(JSON.stringify(tableData));
+  };
   const onDownload = () => {
     const element = document.createElement("a");
     element.setAttribute(
@@ -158,6 +161,7 @@ export function QueryApplication() {
           dataMap={dataMap}
         />
       </div>
+      {/* <TableExample /> */}
       <Result data={tableData} onCopy={onCopy} onDownload={onDownload} />
     </div>
   );
