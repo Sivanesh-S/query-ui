@@ -4,7 +4,8 @@ This is a simple SPA which lets you query a data, and download the results. It a
 
 ## Video demo
 
-*Add a video demo here*
+[![Video Demo](http://img.youtube.com/vi/YgXV4mB6i1A/0.jpg)](http://www.youtube.com/watch?v=YgXV4mB6i1A)
+
 
 ## Features
 
@@ -32,7 +33,7 @@ I measured performance in two tools.
 
 ### Chrome Lighthouse
 
-*Display the image here*
+![Lighthouse score](./docs/lighthouse.png)
 
 Chrome lighthouse provides an overall metrics on how the page works. Like the initial loads, network payloads, painting and etc. 
 
